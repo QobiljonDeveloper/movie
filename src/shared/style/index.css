@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+.container {
+  max-width: 1204px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@theme {
+  --color-py: #c61f1f;
+  --color-sy: #111111;
+  --color-th: #a1a1a1;
+
+  --font-inter: "Inter", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom-select .ant-select-selector {
+  background-color: #ffffff !important;
+  border: 1px solid #d9d9d9 !important;
+  box-shadow: none !important;
+  color: #111111 !important;
+}
+
+.custom-select .ant-select-selection-item {
+  color: #111111 !important;
+}
+
+.custom-select .ant-select-arrow {
+  color: #111111 !important;
+}
+
+.custom-select-dropdown {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+.custom-select-dropdown .ant-select-item {
+  color: #111111 !important;
+}
+
+.custom-select-dropdown .ant-select-item-option-selected {
+  background-color: #f0f0f0 !important;
+  color: #111111 !important;
+}
+
+html.dark .custom-select .ant-select-selector {
+  background-color: #111111 !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+html.dark .custom-select .ant-select-selection-item {
+  color: #ffffff !important;
+}
+
+html.dark .custom-select .ant-select-arrow {
+  color: #ffffff !important;
+}
+
+html.dark .custom-select-dropdown {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+}
+
+html.dark .custom-select-dropdown .ant-select-item {
+  color: #ffffff !important;
+}
+
+html.dark .custom-select-dropdown .ant-select-item-option-selected {
+  background-color: #222222 !important;
+  color: #ffffff !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: #1d1d1d;
+  border-radius: 40px;
+}
+
+.swiper-navigation-icon {
+  width: 10px !important; 
+  height: 20px !important;
+  color: #c61f1f !important;
+  cursor: pointer;
+  user-select: none;
+}
