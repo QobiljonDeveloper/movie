@@ -1,12 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMovies, fetchMovieById, fetchMovieInfo } from "../api/fetchApi";
+import type { IMovieParams } from "./types";
 
 export const useMovie = () => {
-  const getMovies = () =>
+  const getMovies = (params?: IMovieParams) =>
     useQuery<any, any>({
-      queryKey: ["movieKey"], // deps
-      queryFn: fetchMovies,
+      queryKey: ["movieKey", params],
+      queryFn: () => fetchMovies(params),
       retry: 0,
+      refetchOnWindowFocus: false,
+      gcTime: 1000 * 60 * 8,
+      staleTime: 1000 * 60,
     });
 
   const getMovieById = (id: string) =>

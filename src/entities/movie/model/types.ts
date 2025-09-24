@@ -14,3 +14,11 @@ export interface IMovie {
   vote_average: number;
   vote_count: number;
 }
+
+export interface IMovieParams {
+  page: string;
+  sort_by?: string;
+  "primary_release_date.gte"?: string;
+  "primary_release_date.lte"?: string;
+  with_genres?: string;
+}

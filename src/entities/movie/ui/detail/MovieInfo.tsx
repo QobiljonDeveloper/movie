@@ -1,5 +1,5 @@
 import { memo, type FC, useState } from "react";
-import { useMovie } from "../../model/useMovie";
+import { useMovie } from "../../model/useMovie"; 
 import { createImageUrl } from "@/shared/utils";
 import { Image } from "antd";
 import dayjs from "dayjs";
@@ -46,7 +46,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
 
   return (
     <div className="flex flex-col gap-8">
-      <section className="relative w-full h-[400px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
+      <section className="container relative w-full h-[400px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
         <img
           src={createImageUrl(data?.backdrop_path)}
           alt={data?.title}
@@ -59,7 +59,6 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
         </div>
       </section>
 
-      {/* Movie info */}
       <section className="container flex flex-col md:flex-row gap-6 md:gap-12 items-start">
         <div className="md:w-1/3 flex-shrink-0">
           <img
@@ -132,7 +131,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
 
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="flex justify-between items-center">
-                    <p className="font-semibold text-white dark:text-gray-200">
+                    <p className="font-semibold text-black dark:text-gray-200">
                       {review.author_details.username || review.author}
                     </p>
                     <span className="text-gray-400 text-sm">

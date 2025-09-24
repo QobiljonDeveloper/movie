@@ -1,8 +1,13 @@
 import { api } from "@/shared/api";
+import type { IMovieParams } from "../model/types";
 
-export const fetchMovies = async () => {
+export const fetchMovies = async (params?: IMovieParams) => {
   const response = api.get("discover/movie", {
-    params: { without_genres: "18,36,27,10402,10749", with_genres: "16" },
+    params: {
+      without_genres: "18,36,27,10402,10749",
+      with_genres: "16",
+      ...params,
+    },
   });
   return (await response).data;
 };

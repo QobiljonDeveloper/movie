@@ -97,9 +97,122 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
 }
 
 .swiper-navigation-icon {
-  width: 10px !important; 
+  width: 10px !important;
   height: 20px !important;
   color: #c61f1f !important;
   cursor: pointer;
   user-select: none;
+}
+
+.ant-pagination-item {
+  border-color: red !important;
+  background-color: black !important;
+}
+
+.ant-pagination-item a {
+  color: red !important;
+}
+
+.ant-pagination-item-active {
+  background-color: red !important;
+}
+
+.ant-pagination-item-active a {
+  color: black !important;
+}
+
+.ant-pagination-item-ellipsis {
+  color: red !important;
+}
+
+.ant-pagination-item-ellipsis:hover {
+  color: red !important;
+}
+
+.ant-pagination-prev button,
+.ant-pagination-next button {
+  color: red !important;
+  border-color: red !important;
+}
+
+.ant-pagination-prev button:hover,
+.ant-pagination-next button:hover {
+  color: red !important;
+  border-color: red !important;
+}
+.ant-select-selector {
+  background-color: var(--color-th) !important;
+  color: var(--color-py) !important;
+  border: none !important;
+  border-radius: 0.75rem !important; 
+  box-shadow: none !important;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 6px 12px !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dark .ant-select-selector {
+  background-color: var(--color-py) !important;
+  color: var(--color-sy) !important;
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:hover {
+  box-shadow: 0 0 0 2px var(--color-sy);
+}
+
+.custom-select-dropdown {
+  background-color: var(--color-th);
+  color: var(--color-py);
+  border-radius: 0.75rem;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 4px;
+}
+
+.dark .custom-select-dropdown {
+  background-color: var(--color-py);
+  color: var(--color-sy);
+}
+
+.ant-select-item {
+  padding: 8px 12px;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 14px;
+  color: var(--color-py);
+}
+
+.dark .ant-select-item {
+  color: var(--color-sy);
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-selected) {
+  background-color: #000 !important; 
+  color: #fff !important;
+}
+
+.dark .ant-select-item-option-active:not(.ant-select-item-option-selected) {
+  background-color: var(--color-th) !important;
+  color: var(--color-py) !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: #000 !important; 
+  color: #fff !important;
+}
+
+.dark .ant-select-item-option-selected {
+  background-color: var(--color-th) !important;
+  color: var(--color-py) !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #fff !important;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.dark .ant-select-selection-placeholder {
+  color: #fff !important;
 }
