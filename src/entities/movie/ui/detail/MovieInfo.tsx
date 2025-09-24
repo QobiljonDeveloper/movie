@@ -15,7 +15,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
   const { getMovieById, getMovieInfo } = useMovie();
   const { data } = getMovieById(id);
   const { data: imageData } = getMovieInfo(id, "images");
-  const { data: reviewData } = getMovieInfo(id, "reviews");
+  const { data: reviewData } = getMovieInfo(id, "reviews  ");
 
   const [expandedIds, setExpandedIds] = useState<string[]>([]);
 
