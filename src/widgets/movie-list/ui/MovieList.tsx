@@ -16,9 +16,9 @@ export const MovieList: FC<Props> = memo(({ movies }) => {
   }
 
   return (
-    <div className="container mt-12">
+    <div className="container py-12">
       <div className="flex justify-between items-center mb-5">
-        <p className="font-inter font-medium text-white text-[20px]">
+        <p className="font-inter font-medium dark:text-white text-[20px]">
           На неделе
         </p>
         <div className="text-py flex items-center justify-center cursor-pointer">

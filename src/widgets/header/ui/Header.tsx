@@ -70,6 +70,9 @@ export const Header = memo(() => {
           <Select
             defaultValue="en"
             className="custom-select"
+            classNames={{
+              popup: { root: "custom-select-dropdown" },
+            }}
             options={[
               {
                 value: "en",
@@ -112,6 +115,7 @@ export const Header = memo(() => {
               },
             ]}
           />
+
           <button className="bg-py text-white font-inter font-medium px-4 py-2 rounded-lg">
             Войти
           </button>

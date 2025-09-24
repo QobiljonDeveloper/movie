@@ -17,33 +17,30 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
   const { data: imageData } = getMovieInfo(id, "images");
   const { data: reviewData } = getMovieInfo(id, "reviews");
 
-  const [expandedReviews, setExpandedReviews] = useState<{
-    [key: string]: boolean;
-  }>({});
+  const [expandedIds, setExpandedIds] = useState<string[]>([]);
 
   const toggleExpand = (id: string) => {
-    setExpandedReviews((prev) => ({ ...prev, [id]: !prev[id] }));
+    setExpandedIds((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
   };
 
   const renderContent = (content: string, id: string) => {
     const words = content.split(" ");
+    const isExpanded = expandedIds.includes(id);
+
     if (words.length <= 50) return <p>{content}</p>;
 
-    const isExpanded = expandedReviews[id];
-    const displayed = isExpanded
-      ? content
-      : words.slice(0, 50).join(" ") + "...";
-
     return (
-      <>
-        <p>{displayed}</p>
-        <button
+      <p>
+        {isExpanded ? content : words.slice(0, 50).join(" ") + "..."}{" "}
+        <span
           onClick={() => toggleExpand(id)}
-          className="text-py font-medium hover:underline mt-1"
+          className="text-py font-medium hover:underline cursor-pointer"
         >
           {isExpanded ? "Show less" : "Show more"}
-        </button>
-      </>
+        </span>
+      </p>
     );
   };
 
@@ -62,6 +59,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
         </div>
       </section>
 
+      {/* Movie info */}
       <section className="container flex flex-col md:flex-row gap-6 md:gap-12 items-start">
         <div className="md:w-1/3 flex-shrink-0">
           <img
