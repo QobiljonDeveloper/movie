@@ -11,14 +11,16 @@ export const SortBy = memo(() => {
   };
 
   const options = [
-    { value: "first_air_date.asc", label: "First Air Date ↑" },
-    { value: "first_air_date.desc", label: "First Air Date ↓" },
-    { value: "name.asc", label: "Name ↑" },
-    { value: "name.desc", label: "Name ↓" },
-    { value: "original_name.asc", label: "Original Name ↑" },
-    { value: "original_name.desc", label: "Original Name ↓" },
+    { value: "original_title.asc", label: "Original Title ↑" },
+    { value: "original_title.desc", label: "Original Title ↓" },
+    { value: "title.asc", label: "Title ↑" },
+    { value: "title.desc", label: "Title ↓" },
+    { value: "primary_release_date.asc", label: "Release Date ↑" },
+    { value: "primary_release_date.desc", label: "Release Date ↓" },
     { value: "popularity.asc", label: "Popularity ↑" },
     { value: "popularity.desc", label: "Popularity ↓" },
+    { value: "revenue.asc", label: "Revenue ↑" },
+    { value: "revenue.desc", label: "Revenue ↓" },
     { value: "vote_average.asc", label: "Vote Average ↑" },
     { value: "vote_average.desc", label: "Vote Average ↓" },
     { value: "vote_count.asc", label: "Vote Count ↑" },
