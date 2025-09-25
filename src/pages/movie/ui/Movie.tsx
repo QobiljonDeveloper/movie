@@ -4,6 +4,7 @@ import { MovieList } from "@/widgets/movie-list";
 import { MoviePagination } from "@/features/movie-pagination";
 import { useSearchParams } from "react-router-dom";
 import { MovieSort } from "@/widgets/movie-sort";
+import { MovieCardSkeleton } from "@/shared/ui";
 
 export const Movie = memo(() => {
   const { getMovies } = useMovie();
@@ -15,7 +16,7 @@ export const Movie = memo(() => {
   const lte = searchParams.get("lte") ?? "";
   const with_genres = searchParams.get("with_genres") ?? "";
 
-  const { data } = getMovies({
+  const { data, isLoading } = getMovies({
     page,
     sort_by,
     "primary_release_date.gte": gte,
@@ -28,8 +29,13 @@ export const Movie = memo(() => {
       <div className="container flex justify-between items-center gap-4">
         <MovieSort />
       </div>
-      <MovieList movies={data?.results} />
-      <MoviePagination page={page} total_pages={data?.total_results} />
+
+      {isLoading ? (
+        <MovieCardSkeleton count={8} />
+      ) : (
+        <MovieList movies={data?.results} />
+      )}
+      <MoviePagination page={page} total_pages={data?.total_pages} />
     </div>
   );
 });

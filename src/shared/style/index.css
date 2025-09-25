@@ -144,7 +144,7 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
   background-color: var(--color-th) !important;
   color: var(--color-py) !important;
   border: none !important;
-  border-radius: 0.75rem !important; 
+  border-radius: 0.75rem !important;
   box-shadow: none !important;
   transition: background-color 0.3s, color 0.3s;
   padding: 6px 12px !important;
@@ -188,7 +188,7 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
 }
 
 .ant-select-item-option-active:not(.ant-select-item-option-selected) {
-  background-color: #000 !important; 
+  background-color: #000 !important;
   color: #fff !important;
 }
 
@@ -198,7 +198,7 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
 }
 
 .ant-select-item-option-selected {
-  background-color: #000 !important; 
+  background-color: #000 !important;
   color: #fff !important;
 }
 
@@ -215,4 +215,12 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
 
 .dark .ant-select-selection-placeholder {
   color: #fff !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

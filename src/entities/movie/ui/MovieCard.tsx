@@ -17,7 +17,7 @@ export const MovieCard: FC<Props> = memo(({ movie }) => {
           <img
             src={createImageUrl(movie.poster_path)}
             alt={movie.title}
-            className="w-full h-[300px] object-cover"
+            className="w-full object-cover"
           />
         ) : (
           <div className="w-full h-[300px] flex items-center justify-center bg-gray-800 text-gray-400">
