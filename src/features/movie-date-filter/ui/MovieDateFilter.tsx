@@ -25,17 +25,14 @@ export const decades = [
 ];
 
 export const MovieDateFilter = memo(() => {
-  const [_, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleChange = (val: string) => {
     const decade = decades.find((d) => d.label === val);
     if (decade) {
-      setSearchParams((prev) => {
-        const newParams = new URLSearchParams(prev);
-        newParams.set("gte", decade.value.gte);
-        newParams.set("lte", decade.value.lte);
-        return newParams;
-      });
+      searchParams.set("gte", decade.value.gte);
+      searchParams.set("lte", decade.value.lte);
+      setSearchParams(searchParams);
     }
   };
 

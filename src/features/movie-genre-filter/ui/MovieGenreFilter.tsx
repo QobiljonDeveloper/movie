@@ -30,15 +30,12 @@ export const MovieGenreFilter = memo(() => {
   const selected = searchParams.get("with_genres")?.split(",") || [];
 
   const handleChange = (values: string[]) => {
-    setSearchParams((prev) => {
-      const newParams = new URLSearchParams(prev);
-      if (values.length) {
-        newParams.set("with_genres", values.join(","));
-      } else {
-        newParams.delete("with_genres");
-      }
-      return newParams;
-    });
+    if (values.length) {
+      searchParams.set("with_genres", values.join(","));
+    } else {
+      searchParams.delete("with_genres");
+    }
+    setSearchParams(searchParams);
   };
 
   return (

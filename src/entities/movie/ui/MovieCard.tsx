@@ -27,7 +27,7 @@ export const MovieCard: FC<Props> = memo(({ movie }) => {
       </div>
       <div className="p-3">
         <h3
-          className="line-clamp-1 font-semibold dark:text-white"
+          className="line-clamp-1 font-semibold text-sy dark:text-white"
           title={movie.title}
         >
           {movie.title} - {movie.original_language.toUpperCase()}
