@@ -32,7 +32,7 @@ export const MovieCard: FC<Props> = memo(({ movie }) => {
         >
           {movie.title} - {movie.original_language.toUpperCase()}
         </h3>
-        <p className="text-th font-inter font-medium">Test</p>
+        <p className="text-th font-inter font-medium">{movie.vote_average}</p>
       </div>
     </div>
   );
