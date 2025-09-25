@@ -1,9 +1,8 @@
-import { memo, type FC, useState } from "react";
+import { memo, type FC,  } from "react";
 import { useMovie } from "../../model/useMovie";
 import { createImageUrl } from "@/shared/utils";
-import { Image, Tabs } from "antd";
-import dayjs from "dayjs";
-import { NavLink, useLocation } from "react-router-dom";
+import { Image,  } from "antd";
+import { NavLink,  } from "react-router-dom";
 import { Title } from "../../../../shared/ui";
 
 interface Props {

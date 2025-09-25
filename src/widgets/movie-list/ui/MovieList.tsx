@@ -1,6 +1,5 @@
 import { MovieCard, type IMovie } from "@/entities/movie";
 import { memo, type FC } from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
 
 interface Props {
   movies: IMovie[];
