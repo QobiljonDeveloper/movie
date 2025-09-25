@@ -5,7 +5,7 @@ import { MovieGenreFilter } from "@/features/movie-genre-filter";
 
 export const MovieSort = memo(() => {
   return (
-    <div className="container flex items-center gap-10">
+    <div className="container flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
       <SortBy />
       <MovieDateFilter />
       <MovieGenreFilter />
