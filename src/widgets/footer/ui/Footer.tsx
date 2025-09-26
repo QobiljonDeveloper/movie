@@ -1,11 +1,10 @@
 import { memo } from "react";
-import logo from "@/shared/assets/footer-Logo.svg";
+import logo from "@/shared/assets/footer-logo.svg";
 import apple from "@/shared/assets/apple.png";
 import goole from "@/shared/assets/google.png";
 import { FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 
 export const Footer = memo(() => {
-  // This is footer
   return (
     <footer className="bg-white dark:bg-gradient-to-r dark:from-black dark:via-[#111] dark:to-black text-black dark:text-white py-10 transition-colors duration-300">
       <div className="container mx-auto px-6">
