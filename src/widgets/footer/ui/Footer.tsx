@@ -5,6 +5,7 @@ import goole from "@/shared/assets/google.png";
 import { FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 
 export const Footer = memo(() => {
+  // This is comment for teeest because not deploy bomayapti
   return (
     <footer className="bg-white dark:bg-gradient-to-r dark:from-black dark:via-[#111] dark:to-black text-black dark:text-white py-10 transition-colors duration-300">
       <div className="container mx-auto px-6">
