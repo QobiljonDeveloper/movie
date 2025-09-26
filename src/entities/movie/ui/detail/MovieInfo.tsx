@@ -1,28 +1,27 @@
-import { memo, type FC,  } from "react";
+import { memo, type FC } from "react";
 import { useMovie } from "../../model/useMovie";
 import { createImageUrl } from "@/shared/utils";
-import { Image,  } from "antd";
-import { NavLink,  } from "react-router-dom";
+import { Image } from "antd";
+import { NavLink } from "react-router-dom";
 import { Title } from "../../../../shared/ui";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   id: string;
 }
 
 const tabs = [
-  { path: "", label: "Review" },
-  { path: "cast", label: "Cast" },
-  { path: "others", label: "Other" },
+  { path: "", label: "movie.tabs.review" },
+  { path: "cast", label: "movie.tabs.cast" },
+  { path: "others", label: "movie.tabs.other" },
 ];
-
 
 export const MovieInfo: FC<Props> = memo(({ id }) => {
   const { getMovieById, getMovieInfo } = useMovie();
   const { data } = getMovieById(id);
   const { data: imageData } = getMovieInfo(id, "images");
 
-
-  
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col gap-8">
@@ -50,13 +49,14 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
         <div className="flex-1 flex flex-col gap-3">
           <h2 className="text-2xl font-semibold text-white">{data?.title}</h2>
           <p className="text-gray-500 dark:text-gray-300">
-            Budget: {data?.budget?.toLocaleString()} USD
+            {t("movie.info.budget")}: {data?.budget?.toLocaleString()} USD
           </p>
           <p className="text-gray-500 dark:text-gray-300">
-            Release Date: {data?.release_date}
+            {t("movie.info.release_date")}: {data?.release_date}
           </p>
           <p className="text-gray-500 dark:text-gray-300">
-            Original Language: {data?.original_language?.toUpperCase()}
+            {t("movie.info.original_language")}:{" "}
+            {data?.original_language?.toUpperCase()}
           </p>
           {data?.homepage && (
             <a
@@ -64,7 +64,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
               target="_blank"
               className="text-py font-medium hover:underline"
             >
-              Official Website
+              {t("movie.info.official_website")}
             </a>
           )}
         </div>
@@ -72,7 +72,7 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
 
       {imageData?.backdrops?.length > 0 && (
         <section className="container flex flex-col gap-4">
-          <Title>Gallery</Title>
+          <Title>{t("movie.info.gallery")}</Title>
           <div className="flex overflow-x-auto gap-3 pb-2">
             {imageData?.backdrops.slice(0, 20).map((item: any, inx: number) => (
               <Image
@@ -100,12 +100,10 @@ export const MovieInfo: FC<Props> = memo(({ id }) => {
               }`
             }
           >
-            {tab.label}
+            {t(tab.label)}
           </NavLink>
         ))}
       </div>
-
-  
     </div>
   );
 });

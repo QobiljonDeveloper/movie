@@ -1,0 +1,67 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Главная",
+      "movies": "Фильмы",
+      "bookmarks": "Закладки",
+      "search": "Поиск"
+    }
+  },
+  "during_the_week": "В течение недели",
+  "show_all": "Показать все",
+  "hero": {
+    "see_more": "Смотреть больше"
+  },
+
+  "movie": {
+    "tabs": {
+      "review": "Обзор",
+      "cast": "Актеры",
+      "other": "Другое"
+    },
+    "info": {
+      "budget": "Бюджет",
+      "release_date": "Дата выхода",
+      "original_language": "Оригинальный язык",
+      "official_website": "Официальный сайт",
+      "gallery": "Галерея"
+    }
+  },
+  "review": {
+    "show_more": "Показать больше",
+    "show_less": "Показать меньше",
+    "no_reviews": "Отзывы не найдены.",
+    "read_full": "Читать полный отзыв"
+  },
+
+  "fil_not_found": "Фильм не найден",
+
+  "search_placeholder": "Поиск фильмов...",
+  "search_message": "Начните вводить для поиска фильмов",
+
+  "similar_movies": "Похожие фильмы",
+
+  "bookmarks": {
+    "empty": "Нет сохранённых фильмов",
+    "title": "Сохранённые фильмы"
+  },
+  "footer": {
+    "about_section": {
+      "about_us": "О нас",
+      "public_offer": "Публичная оферта",
+      "adversting": "Реклама",
+      "faq": "Вопросы и ответы",
+      "contacts": "Контакты"
+    },
+    "category": {
+      "cinema": "Кино",
+      "theater": "Театр",
+      "concerts": "Концерты",
+      "sports": "Спорт"
+    },
+    "contact": {
+      "contacts": "Контакты",
+      "social_media": "Социальные сети"
+    }
+  }
+}

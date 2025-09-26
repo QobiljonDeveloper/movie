@@ -1,0 +1,67 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "movies": "Movies",
+      "bookmarks": "Bookmarks",
+      "search": "Search"
+    }
+  },
+  "during_the_week": "During the week",
+  "show_all": "Show all",
+  "hero": {
+    "see_more": "See more"
+  },
+
+  "movie": {
+    "tabs": {
+      "review": "Review",
+      "cast": "Cast",
+      "other": "Other"
+    },
+    "info": {
+      "budget": "Budget",
+      "release_date": "Release Date",
+      "original_language": "Original Language",
+      "official_website": "Official Website",
+      "gallery": "Gallery"
+    }
+  },
+  "review": {
+    "show_more": "Show more",
+    "show_less": "Show less",
+    "no_reviews": "No reviews found.",
+    "read_full": "Read full review"
+  },
+
+  "fil_not_found": "No movies found",
+
+  "search_placeholder": "Search movies...",
+  "search_message": "Start typing to search for movies",
+
+  "bookmarks": {
+    "empty": "No saved movies",
+    "title": "Saved Movies"
+  },
+
+  "similar_movies": "Similar movies",
+  "footer": {
+    "about_section": {
+      "about_us": "About Us",
+      "public_offer": "Public offer",
+      "adversting": "Advertising",
+      "faq": "F.A.Q",
+      "contacts": "Contacts"
+    },
+    "category": {
+      "cinema": "Cinema",
+      "theater": "Theater",
+      "concerts": "Concerts",
+      "sports": "Sports"
+    },
+    "contact": {
+      "contacts": "Contacts",
+      "social_media": "Social media"
+    }
+  }
+}

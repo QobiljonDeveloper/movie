@@ -1,0 +1,68 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Bosh sahifa",
+      "movies": "Filmlar",
+      "bookmarks": "Saqlanganlar",
+      "search": "Qidiruv"
+    }
+  },
+  "during_the_week": "Hafta davomida",
+  "show_all": "Barchasini ko‘rish",
+  "hero": {
+    "see_more": "Ko'proq ko'rish"
+  },
+
+  "movie": {
+    "tabs": {
+      "review": "Sharh",
+      "cast": "Aktyorlar",
+      "other": "Boshqa"
+    },
+    "info": {
+      "budget": "Byudjet",
+      "release_date": "Chiqarilgan sana",
+      "original_language": "Asl til",
+      "official_website": "Rasmiy sayt",
+      "gallery": "Galereya"
+    }
+  },
+
+  "review": {
+    "show_more": "Ko'proq ko'rsatish",
+    "show_less": "Kamroq ko'rsatish",
+    "no_reviews": "Sharhlar topilmadi.",
+    "read_full": "To‘liq sharhni o‘qish"
+  },
+
+  "fil_not_found": "Film topilmadi",
+
+  "search_placeholder": "Filmlarni qidiring...",
+  "search_message": "Filmlarni qidirish uchun yozishni boshlang",
+
+  "similar_movies": "O'xshash kinolar",
+  "bookmarks": {
+    "empty": "Hech qanday saqlangan film yo‘q",
+    "title": "Saqlangan Filmlar"
+  },
+
+  "footer": {
+    "about_section": {
+      "about_us": "Biz haqimizda",
+      "public_offer": "Ommaviy oferta",
+      "adversting": "Reklama joylashtirish",
+      "faq": "Savol-javoblar",
+      "contacts": "Aloqa"
+    },
+    "category": {
+      "cinema": "Kino",
+      "theater": "Teatr",
+      "concerts": "Konsertlar",
+      "sports": "Sport"
+    },
+    "contact": {
+      "contacts": "Aloqa",
+      "social_media": "Ijtimoiy tarmoqlar"
+    }
+  }
+}

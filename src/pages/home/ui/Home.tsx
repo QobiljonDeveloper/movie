@@ -4,10 +4,12 @@ import { MovieList } from "@/widgets/movie-list";
 import { memo } from "react";
 import { Hero } from "@/widgets/hero";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 export const Home = memo(() => {
   const { getMovies } = useMovie();
   const { data, isLoading, isError } = getMovies();
+  const { t } = useTranslation();
 
   if (isLoading) {
     return (
@@ -34,10 +36,12 @@ export const Home = memo(() => {
       <div className="container">
         <div className="flex justify-between items-center mb-5">
           <p className="font-inter font-medium dark:text-white text-[20px]">
-            На неделе
+            {t("during_the_week")}
           </p>
           <div className="text-py flex items-center justify-center cursor-pointer">
-            <p className="font-inter font-medium text-[20px]">Показать все</p>
+            <p className="font-inter font-medium text-[20px]">
+              {t("show_all")}
+            </p>
             <MdKeyboardArrowRight size={20} />
           </div>
         </div>

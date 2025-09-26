@@ -224,3 +224,49 @@ html.dark .custom-select-dropdown .ant-select-item-option-selected {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.ant-input-affix-wrapper {
+  background-color: #ffffff;
+  color: #111111;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.dark .ant-input-affix-wrapper {
+  background-color: #1f1f1f;
+  color: #e5e5e5;
+}
+
+.ant-input {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.ant-input-search-button {
+  background-color: #c61f1f; 
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.ant-input-search-button:hover {
+  background-color: #a11616;
+}
+
+.dark .ant-input-search-button {
+  background-color: #c61f1f;
+  color: #ffffff;
+}
+
+.dark .ant-input-search-button:hover {
+  background-color: #e02727;
+}
+
+
+.ant-input::placeholder {
+  @apply text-sy; 
+}
+
+.dark .ant-input::placeholder {
+  @apply text-white; 
+}

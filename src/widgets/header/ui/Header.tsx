@@ -8,11 +8,16 @@ import {
   IoHome,
   IoSunny,
   IoMoon,
+  IoLogInOutline,
 } from "react-icons/io5";
 import { Select, Button } from "antd";
 import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from "react-i18next";
 
 export const Header = memo(() => {
+  const { t, i18n } = useTranslation();
+
+  console.log(i18n.language);
   const [darkMode, setDarkMode] = useState(() => {
     const theme = localStorage.getItem("theme");
     return theme === "dark";
@@ -30,14 +35,22 @@ export const Header = memo(() => {
   }, [darkMode]);
 
   const navItems = [
-    { to: "/", icon: <IoHome size={20} />, label: "Home" },
-    { to: "/movies", icon: <IoFilm size={20} />, label: "Movies" },
+    { to: "/", icon: <IoHome size={20} />, label: t("header.navigation.home") },
+    {
+      to: "/movies",
+      icon: <IoFilm size={20} />,
+      label: t("header.navigation.movies"),
+    },
     {
       to: "/bookmarks",
       icon: <IoBookmarkSharp size={20} />,
-      label: "Bookmarks",
+      label: t("header.navigation.bookmarks"),
     },
-    { to: "/search", icon: <IoSearch size={20} />, label: "Search" },
+    {
+      to: "/search",
+      icon: <IoSearch size={20} />,
+      label: t("header.navigation.search"),
+    },
   ];
 
   return (
@@ -68,11 +81,10 @@ export const Header = memo(() => {
 
         <div className="flex items-center gap-2">
           <Select
-            defaultValue="en"
+            defaultValue={i18n.language}
+            onChange={(value) => i18n.changeLanguage(value)}
             className="custom-select"
-            classNames={{
-              popup: { root: "custom-select-dropdown" },
-            }}
+            classNames={{ popup: { root: "custom-select-dropdown" } }}
             options={[
               {
                 value: "en",
@@ -116,9 +128,10 @@ export const Header = memo(() => {
             ]}
           />
 
-          <button className="bg-py text-white font-inter font-medium px-4 py-2 rounded-lg">
-            Войти
-          </button>
+          <IoLogInOutline
+            size={25}
+            className="cursor-pointer dark:text-white hover:text-py"
+          />
 
           <Button
             type="text"

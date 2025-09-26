@@ -1,5 +1,10 @@
 import { memo } from "react";
+import { SearchMovie } from "../../../features/movie-search";
 
 export const Search = memo(() => {
-  return <div>Search</div>;
+  return (
+    <div>
+      <SearchMovie />
+    </div>
+  );
 });
