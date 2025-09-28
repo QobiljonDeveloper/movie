@@ -44,6 +44,13 @@
     "title": "Saved Movies"
   },
 
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in with your Google account to continue",
+    "terms": "By signing in, you agree to our",
+    "terms_link": "Terms & Conditions"
+  },
+
   "similar_movies": "Similar movies",
   "footer": {
     "about_section": {

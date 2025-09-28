@@ -40,6 +40,13 @@
   "search_placeholder": "Filmlarni qidiring...",
   "search_message": "Filmlarni qidirish uchun yozishni boshlang",
 
+  "login": {
+    "title": "Xush kelibsiz",
+    "subtitle": "Davom etish uchun Google hisobingiz bilan kiring",
+    "terms": "Kirish orqali siz quyidagi shartlarga rozi bo‘lasiz",
+    "terms_link": "Foydalanish shartlari"
+  },
+
   "similar_movies": "O'xshash kinolar",
   "bookmarks": {
     "empty": "Hech qanday saqlangan film yo‘q",

@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "@/shared/assets/logo.svg";
 import {
   IoBookmarkSharp,
@@ -10,14 +10,19 @@ import {
   IoMoon,
   IoLogInOutline,
 } from "react-icons/io5";
-import { Select, Button } from "antd";
+import { Select, Button, Dropdown, type MenuProps, Avatar } from "antd";
 import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from "react-i18next";
+import type { RootState } from "../../../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import { removeUser } from "@/features/auth";
 
 export const Header = memo(() => {
   const { t, i18n } = useTranslation();
+  const user = useSelector((state: RootState) => state.auth.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  console.log(i18n.language);
   const [darkMode, setDarkMode] = useState(() => {
     const theme = localStorage.getItem("theme");
     return theme === "dark";
@@ -50,6 +55,21 @@ export const Header = memo(() => {
       to: "/search",
       icon: <IoSearch size={20} />,
       label: t("header.navigation.search"),
+    },
+  ];
+
+  const handleLogout = () => {
+    dispatch(removeUser());
+  };
+
+  const menuItems: MenuProps["items"] = [
+    {
+      key: "profile",
+      label: <div onClick={() => navigate("/profile")}>Profile</div>,
+    },
+    {
+      key: "logout",
+      label: <div onClick={handleLogout}>Logout</div>,
     },
   ];
 
@@ -128,10 +148,22 @@ export const Header = memo(() => {
             ]}
           />
 
-          <IoLogInOutline
-            size={25}
-            className="cursor-pointer dark:text-white hover:text-py"
-          />
+          {user ? (
+            <Dropdown menu={{ items: menuItems }} placement="bottomRight">
+              <Avatar
+                src={user.picture}
+                size={40}
+                className="cursor-pointer border"
+              />
+            </Dropdown>
+          ) : (
+            <button onClick={() => navigate("/login")}>
+              <IoLogInOutline
+                size={25}
+                className="cursor-pointer dark:text-white hover:text-py"
+              />
+            </button>
+          )}
 
           <Button
             type="text"
