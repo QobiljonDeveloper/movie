@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import "swiper/css/autoplay";
 
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, Thumbs, Autoplay } from "swiper/modules"; 
 import { createImageUrl } from "@/shared/utils";
 import { TbPlayerPlayFilled } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
@@ -21,6 +22,7 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
 
   return (
     <>
+      {/* Main Swiper */}
       <Swiper
         style={
           {
@@ -30,9 +32,13 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
         }
         loop={true}
         spaceBetween={10}
-        navigation={true}
+        navigation={false} 
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Thumbs, Autoplay]}
         className="rounded-[12px]"
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
@@ -60,13 +66,10 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
                     {item.release_date?.split("-")[0]}
                   </p>
                   <span className="font-inter font-normal">•</span>
-
                   <p className="font-inter font-normal">Test</p>
                   <span className="font-inter font-normal">•</span>
-
                   <p className="font-inter font-normal">Test min</p>
                   <span className="font-inter font-normal">•</span>
-
                   <p className="font-inter font-normal">
                     {item.original_language.toUpperCase()}
                   </p>
@@ -84,7 +87,6 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
         ))}
       </Swiper>
 
-      {/* Thumbs Swiper */}
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
@@ -92,7 +94,11 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
         slidesPerView={2}
         freeMode={true}
         watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[FreeMode, Thumbs, Autoplay]}
         className="mt-2"
         breakpoints={{
           320: { slidesPerView: 2, spaceBetween: 5 },

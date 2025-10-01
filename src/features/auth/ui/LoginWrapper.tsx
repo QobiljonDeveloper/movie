@@ -16,7 +16,7 @@ export const LoginWrapper = memo(() => {
           {t("login.title")}
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-300 text-center">
-          {t("login.subtitle")}
+        {t("login.subtitle")}
         </p>
 
         <GoogleLogin
