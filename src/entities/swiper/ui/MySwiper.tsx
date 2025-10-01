@@ -22,7 +22,7 @@ export const MySwiper: FC<Props> = memo(({ data }) => {
 
   return (
     <>
-      {/* Main Swiper */}
+      
       <Swiper
         style={
           {
